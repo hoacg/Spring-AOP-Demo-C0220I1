@@ -10,11 +10,11 @@ import javax.validation.constraints.Size;
 public class User {
 
 
-    @NotEmpty
-    @Size(min = 2, max = 30)
+    @NotEmpty(message = "Không được để trống trường này")
+    @Size(min = 2, max = 30, message = "Phải từ 2 đến 30 kí tự")
     private String name;
 
-    @Min(18)
+    @Min(value = 18, message = "Ít nhất 18 tuổi")
     private int age;
 
 
